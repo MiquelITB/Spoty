@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados CSV</title>
+</head>
+<body>
+  <h1>Datos extraídos de CSV</h1>
+  <div id="resultados">
+    </div>
+
+  <script>
+    // Tu código JavaScript para leer y procesar los archivos CSV iría aquí
+    // ... (El código que te di antes) ...
+
+    // Ejemplo de cómo agregar resultados al div "resultados"
+    const resultadosDiv = document.getElementById('resultados');
+    const resultados = [
+      ['Dato 1', 'Dato 2'],
+      ['Otro dato 1', 'Otro dato 2'],
+      // ... (Agrega aquí los resultados de tu script) ...
+    ];
+
+    resultados.forEach(fila => {
+      const filaDiv = document.createElement('div');
+      fila.forEach(dato => {
+        const datoSpan = document.createElement('span');
+        datoSpan.textContent = dato + ' '; // Agrega un espacio entre los datos
+        filaDiv.appendChild(datoSpan);
+      });
+      resultadosDiv.appendChild(filaDiv);
+    });
+  </script>
+</body>
+</html>
